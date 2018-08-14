@@ -6,3 +6,8 @@ Query5 - Stories that are dead but not deleted
 
 Query6 - All stories/comments from a given user.
 Query7 - Top ranked stories/comments (generate word cloud of top ranked stories?)
+
+
+Complex query
+
+Query 1 – List of comments by author name, by creating a set for comments under the main table with comment ID n Comment
