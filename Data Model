@@ -1,0 +1,60 @@
+Data Model 
+
+Query 1 – List of comments by author name, by creating a UDT for comment text
+
+TYPE author 
+
+Column name	Type
+Author ID	int
+Author Name	varchar
+
+TABLE comments 
+
+Column name	Type
+Comment ID	int
+Comment time	date
+Comment 	Text
+Ranking		int
+Authors	Map<Author>
+
+
+Query 2 –  Listing the count of stories/ comments from an author
+
+TYPE author 
+
+Column name	Type
+Author ID	int
+Author Name	varchar
+
+TABLE Stories_Comments
+
+Column name	Type
+Unique ID	int
+Time		date
+Body 		Text
+Type		Text
+Authors		Map<Author>
+
+
+Query 3 -  Top 50 stories having highest number of descendants
+
+TABLE Stories
+
+Column name	Type
+Story ID	int
+Time		date
+Story		Text
+Author		text
+No_of_Descendants	varchar
+
+Query 4 - Top ranked stories/comment
+
+TABLE Stories_Comments
+
+Column name	Type
+Unique ID	int
+Time		date
+Body 		Text
+Ranking		int
+Type		Text
+
