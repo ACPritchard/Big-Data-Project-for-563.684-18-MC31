@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This is an example of a working SStable generator to make Cassandra SSTables froma  CSV file
+ * 
+ * 
  */
 package cassandraapi;
 //import org.apache.cassandra.io.sstable.SSTable;
