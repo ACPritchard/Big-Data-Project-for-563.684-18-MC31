@@ -1,0 +1,29 @@
+CREATE KEYSPACE if not exists Project with replication = {'class':'SimpleStrategy','replication_factor':3};
+
+USE Project;
+
+CREATE TABLE if not exists Comments_Stories
+(author text,
+unique_id int,
+comment_time date,
+comment_story text,
+type text,
+ranking int,
+Primary Key(unique_id,author));
+
+CREATE INDEX if not exists on Comments_Stories(author);
+
+
+CREATE STORIES if not exists Stories
+(story_id int,
+story_time date,
+story text,
+author text,
+no_of_descendants int,
+Primary Key(story_id,no_of_descendants));
+
+
+##Created 2 tables, 3 queries can be executed on first table 
+for last query second table is created.
+
+
