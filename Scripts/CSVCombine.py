@@ -29,6 +29,7 @@ files = [
 #just a variable to keep track of the writes
 i = 0
 
+#Where all the action occurs
 for source in files:
     df = pd.read_csv(source, skiprows=0, chunksize=10000)
     for chunk in df:
