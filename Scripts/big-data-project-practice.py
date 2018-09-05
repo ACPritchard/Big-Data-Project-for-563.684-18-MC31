@@ -16,6 +16,7 @@ from bq_helper import BigQueryHelper
 # Any results you write to the current directory are saved as output.
 
 #some queries to extract the data from the hacker news dataset
+#I end up getting chunks from the tables, as chunks >1gig tend to fail even if I can theoretically get upto 5gig
 bq_assistant = BigQueryHelper("bigquery-public-data", "hacker_news")
 #pandas_client = bigquery.Client()
 #bq_assistant.list_tables()
