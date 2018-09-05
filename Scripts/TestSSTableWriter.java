@@ -1,6 +1,6 @@
 /*
  * This is an example of a working SStable generator to make Cassandra SSTables froma  CSV file
- * 
+ * Not done
  * 
  */
 package cassandraapi;
