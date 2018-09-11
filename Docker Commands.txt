@@ -1,0 +1,11 @@
+docker run --name cassandra-n1-seed -d cassandra
+
+docker run --name cassandra-n2 -e CASSANDRA_SEEDS="$(docker inspect --format='{{ .NetworkSettings.IPAddress }}' cassandra-n1-seed)" cassandra
+
+docker run  --name cassandra-n3 -e CASSANDRA_SEEDS="$(docker inspect --format='{{ .NetworkSettings.IPAddress }}' cassandra-n1-seed)" cassandra 
+
+#This creates a new default machine with 2 processors and 4 gig of ram, for hosting my 3 nodes
+docker-machine rm default
+docker-machine create -d virtualbox --virtualbox-cpu-count=2 --virtualbox-memory=4096 --virtualbox-disk-size=50000 default
+docker-machine stop
+exit
